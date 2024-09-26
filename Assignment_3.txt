@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class DoorAccessControl {
+    public static void main(String[] args) {
+    
+        Scanner scanner = new Scanner(System.in);
+
+       
+        System.out.print("Do you have a valid ID? (true/false): ");
+        boolean hasValidID = scanner.nextBoolean();
+
+        System.out.print("Do you have a valid access card? (true/false): ");
+        boolean hasValidAccessCard = scanner.nextBoolean();
+
+        System.out.print("Are you an admin? (true/false): ");
+        boolean isAdmin = scanner.nextBoolean();
+
+        if ((hasValidID && hasValidAccessCard) || isAdmin) {
+            System.out.println("Access Granted.");
+        } else {
+            System.out.println("Access Denied.");
+        }
+
+        // Close the scanner
+        scanner.close();
+    }
+}

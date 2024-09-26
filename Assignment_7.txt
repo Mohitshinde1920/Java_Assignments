@@ -1,0 +1,43 @@
+/*Assignment 7: Weather Conditions
+Write a program that determines whether it's safe to go outside based on temperature 
+and weather conditions. The conditions to go outside are:
+•    Temperature should be between 20°C and 30°C.
+•    It should not be raining.
+Requirements:
+•    Use logical operators && and !.*/
+
+import java.util.Scanner;
+
+public class Weather {
+	private float Temperature;
+	private String weatherconditions;
+	Scanner sc = new Scanner(System.in);
+	public void accepteinfo()
+	{
+		System.out.println("enter the Temperature");
+		Temperature = sc.nextFloat();
+		System.out.println("enter the weatherconditions");
+		weatherconditions=sc.next();
+	}
+	
+	public void checkcondition()
+	{
+		if(Temperature>20 && Temperature<30 && weatherconditions!="raining")
+		{
+			System.out.println("conditions to go outside");
+		}
+		else {
+			System.out.println("conditions is not go outside");
+		}
+		
+			
+		
+	}
+public static void main(String[] args) {
+	
+	Weather w = new Weather();
+	w.accepteinfo();
+	w.checkcondition();
+	
+}
+}

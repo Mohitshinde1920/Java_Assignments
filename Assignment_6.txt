@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+/*Assignment 6: Logical NOT (!) for Negation
+Write a program that determines whether a number is not between 10 and 20 (inclusive).
+Requirements:
+•    Use logical ! to negate conditions.
+*/
+public class Number {
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the number");
+		num= sc.nextInt();
+		if(!(num>10 && num<20))
+		{
+			System.out.println("the number is not in between 10 and 20");
+		}
+		else {
+			System.out.println("the number is in between 10 and 20");
+		}
+
+	}
+
+}

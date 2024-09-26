@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class JobApplication {
+    public static void main(String[] args) {
+      
+        Scanner scanner = new Scanner(System.in);
+
+
+        System.out.print("Do you have a bachelor's degree? (true/false): ");
+        boolean hasBachelorsDegree = scanner.nextBoolean();
+
+        System.out.print("Do you have equivalent experience? (true/false): ");
+        boolean hasEquivalentExperience = scanner.nextBoolean();
+
+        System.out.print("Do you have a clean criminal record? (true/false): ");
+        boolean hasCleanRecord = scanner.nextBoolean();
+
+    
+        if ((hasBachelorsDegree || hasEquivalentExperience) && hasCleanRecord) {
+            System.out.println("You are eligible for the job.");
+        } else {
+            System.out.println("You are not eligible for the job.");
+        }
+
+
+        scanner.close();
+    }
+}
